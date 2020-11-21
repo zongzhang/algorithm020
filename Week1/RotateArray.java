@@ -9,7 +9,7 @@ public class RotateArray {
         int[] nuws = {1, 2, 3, 4, 5, 6, 7};
         int k = 3;
         RotateArray rotateArray = new RotateArray();
-        rotateArray.rotate(nuws, k);
+        rotateArray.rotate2(nuws, k);
         System.out.println(Arrays.toString(nuws));
     }
 
@@ -26,9 +26,29 @@ public class RotateArray {
         }
     }
 
-    public void moveArray(int[] nums) {
+    private void moveArray(int[] nums) {
         for (int i = nums.length - 1; i > 0; i--) {
             nums[i] = nums[i - 1];
+        }
+    }
+
+
+    //三次翻转
+    public void rotate2(int[] nums, int k) {
+        //解决步长问题
+        k %= nums.length;
+        reverse(nums, 0, nums.length - 1);
+        reverse(nums, 0, k - 1);
+        reverse(nums, k, nums.length - 1);
+    }
+
+    public void reverse(int[] nums, int start, int end) {
+        while (start < end) {
+            int temp = nums[start];
+            nums[start] = nums[end];
+            nums[end] = temp;
+            start++;
+            end--;
         }
     }
 
