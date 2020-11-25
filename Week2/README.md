@@ -2,7 +2,7 @@
 
 # 一、哈希表、映射、集合的实现与特性
 
-## 1.HashMap笔记
+## 1.HashMap学习
 
 **基于jdk1.8**
 
@@ -12,7 +12,7 @@ java的map数据结构定义是java.util.Map
 
 类继承实现关系如图：
 
-![f7fe16a2](/Users/wjcmac/myLearn/algorithm020/Week2/map1.png)
+![f7fe16a2](map1.png)
 
 - HashMap根据hashcode存储数据。最多只允许一条记录的键值为null，允许多条记录的值为null。其非线程安全，如果想满足线程安全，可以用synchronizedMap方法或使用ConcurrentHashMap。
 - HashTable，线程安全，为了线程安全其实现方式导致性能低下。
