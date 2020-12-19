@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * 两数之和 no.1
+ *
  * @since 1.0
  */
 public class TwoSum {
@@ -24,7 +26,7 @@ public class TwoSum {
 
     // 哈希表
     public int[] twoSum2(int[] nums, int target) {
-        Map<Integer, Integer> hashtable = new HashMap<Integer, Integer>();
+        Map<Integer, Integer> hashtable = new HashMap<>();
         for (int i = 0; i < nums.length; ++i) {
             if (hashtable.containsKey(target - nums[i])) {
                 return new int[]{hashtable.get(target - nums[i]), i};
