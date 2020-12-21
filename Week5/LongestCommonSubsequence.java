@@ -7,7 +7,7 @@ public class LongestCommonSubsequence {
     // 暴力
     // 动态规划
     // 升维 一维变二维  关键：不改变字符的相对顺序
-    // 从最后字符开始看起，
+    // 从最后字符开始看起，至少有一个A相同
     // S1 = "........A"
     // S2 = "........A"
     public int longestCommonSubsequence(String text1, String text2) {
